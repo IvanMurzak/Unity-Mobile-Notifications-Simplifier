@@ -161,6 +161,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  channel: channel
+  title: My Title
+  text: Some description text, bla-bla-bla! This is demo text.
+  largeIcon: 
+  channelName: 
+  channelDescription: 
+  smallIcon: 
+  offsetSeconds: 5
 --- !u!4 &79397019
 Transform:
   m_ObjectHideFlags: 0

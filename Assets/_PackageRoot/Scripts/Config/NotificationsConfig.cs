@@ -1,7 +1,5 @@
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
-using System.IO;
-using UnityEngine;
 
 namespace Extensions.Notifications
 {
@@ -14,7 +12,7 @@ namespace Extensions.Notifications
         [BoxGroup("B", false), HorizontalGroup("B/H")]
         [TitleGroup("B/H/Settings")]    public bool             debug                       = true;
         [TitleGroup("B/H/Settings")]    public string	        iconSmall		            = "app_notification_small";
-        [TitleGroup("B/H/Settings")]    public List<string>		channels					= new List<string>(){ "default" };
+        //[TitleGroup("B/H/Settings")]    public List<string>		channels					= new List<string>(){ "default" };
     }
 #pragma warning restore CA2235 // Mark all non-serializable fields
 }

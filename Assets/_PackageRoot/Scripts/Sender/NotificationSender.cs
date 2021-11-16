@@ -1,7 +1,6 @@
-using Sirenix.OdinInspector;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 namespace Extensions.Notifications
 {
