@@ -1,12 +1,12 @@
 {
-    "name": "Extensions.Unity.Notification.Editor",
+    "name": "Extensions.Unity.Notifications",
     "rootNamespace": "",
     "references": [
-        "Extensions.Unity.Notification"
+        "Unity.Notifications.Android",
+        "Unity.Notifications.iOS",
+        "UniTask"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
