@@ -1,4 +1,5 @@
-# Unity-Mobile-Notifications-Simplifier
+![npm](https://img.shields.io/npm/v/extensions.unity.notifications)
+# Unity Mobile Notifications Simplifier
 Ready to use Android and iOS mobile notification solution based on official Unity Mobile Notifications package. Build on top of [Unity Mobile Notifications](https://docs.unity3d.com/Packages/com.unity.mobile.notifications@1.4/manual/index.html) package. Supported codeless usage if needed but not required.
 
 # How to use
