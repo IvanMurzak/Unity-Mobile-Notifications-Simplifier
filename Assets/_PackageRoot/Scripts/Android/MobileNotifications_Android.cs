@@ -25,8 +25,8 @@ namespace Extensions.Notifications
 				CHANNEL_REGISTERED[identifier] = true;
 			}
 		}
-	
-		public static void SendNotification(string identifier, string title, string text, DateTime fireTime, string largeIcon = null, string channelName = "", string channelDescription = "", string smallIcon = ICON_NOTIFICATION_SMALL)
+
+		public static void Schedule(string identifier, string title, string text, DateTime fireTime, string largeIcon = null, string channelName = "", string channelDescription = "", string smallIcon = ICON_NOTIFICATION_SMALL)
 		{
 			RegisterNotificationChannel(identifier, channelName, channelDescription);
 
@@ -45,7 +45,7 @@ namespace Extensions.Notifications
 			
 			AndroidNotificationCenter.SendNotification(notification, identifier);
 		}
-		public static void CancelAllScheduledNotifications()
+		public static void CancelAllScheduled()
 		{
 			AndroidNotificationCenter.CancelAllScheduledNotifications();
 		}

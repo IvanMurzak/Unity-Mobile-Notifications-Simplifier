@@ -66,7 +66,7 @@ namespace Extensions.Notifications
 			}
 		}
 	
-		public static void SendNotification(string identifier, string title, string subtitle, string text, DateTime fireTime)
+		public static void Schedule(string identifier, string title, string subtitle, string text, DateTime fireTime)
 		{
 			var interval = DateTime.Now - fireTime;
 			if (interval <= TimeSpan.Zero)
@@ -80,7 +80,7 @@ namespace Extensions.Notifications
 
 			RegisterNotificationChannel(identifier, title, subtitle, text, timeTrigger).Forget();
 		}
-		public static void CancelAllScheduledNotifications()
+		public static void CancelAllScheduled()
 		{
 			iOSNotificationCenter.RemoveAllScheduledNotifications();
 		}
