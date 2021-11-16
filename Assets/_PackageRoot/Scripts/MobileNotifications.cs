@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Extensions.Notifications
 { 
@@ -18,6 +19,9 @@ namespace Extensions.Notifications
 		{
 			if (string.IsNullOrEmpty(smallIcon)) smallIcon = Config.iconSmall;
 
+			if (Config.debug) 
+				Debug.Log($"MobileNotifications.Schedule: channel={channel}, title={title}, fireTime={fireTime}, largeIcon={largeIcon}, channelName={channelName}, channelDescription={channelDescription}, smallIcon={smallIcon}");
+
 #if UNITY_ANDROID
 			MobileNotifications_Android.Schedule(channel, title, text, fireTime, largeIcon, channelName, channelDescription, smallIcon);
 #elif UNITY_IOS
@@ -26,6 +30,9 @@ namespace Extensions.Notifications
 		}
 		public static void CancelAllScheduled()
 		{
+			if (Config.debug)
+				Debug.Log($"MobileNotifications.CancelAllScheduled");
+			
 #if UNITY_ANDROID
 			MobileNotifications_Android.CancelAllScheduled();
 #elif UNITY_IOS

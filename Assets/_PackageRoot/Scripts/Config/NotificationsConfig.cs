@@ -12,6 +12,7 @@ namespace Extensions.Notifications
                                         public const    string  PATH_FOR_RESOURCES_LOAD     = "Notifications Settings";
 
         [BoxGroup("B", false), HorizontalGroup("B/H")]
+        [TitleGroup("B/H/Settings")]    public bool             debug                       = true;
         [TitleGroup("B/H/Settings")]    public string	        iconSmall		            = "app_notification_small";
         [TitleGroup("B/H/Settings")]    public List<string>		channels					= new List<string>(){ "default" };
     }
