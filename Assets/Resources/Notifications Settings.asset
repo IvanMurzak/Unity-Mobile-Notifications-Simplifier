@@ -21,6 +21,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  iconSmall: demo_notification
-  channels:
-  - default
+  debug: 1
+  iconAndroidSmall: app_notification_small
+  iconAndroidLarge: app_notification_large

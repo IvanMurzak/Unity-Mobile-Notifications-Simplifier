@@ -17,7 +17,8 @@ namespace Extensions.Notifications
 		}
 		public static void Schedule(string channel, string title, string text, DateTime fireTime, string largeIcon = null, string channelName = "", string channelDescription = "", string smallIcon = null)
 		{
-			if (string.IsNullOrEmpty(smallIcon)) smallIcon = Config.iconSmall;
+			if (string.IsNullOrEmpty(smallIcon)) smallIcon = Config.iconAndroidSmall;
+			if (string.IsNullOrEmpty(largeIcon)) largeIcon = Config.iconAndroidLarge;
 
 			if (Config.debug) 
 				Debug.Log($"MobileNotifications.Schedule: channel={channel}, title={title}, fireTime={fireTime}, largeIcon={largeIcon}, channelName={channelName}, channelDescription={channelDescription}, smallIcon={smallIcon}");
