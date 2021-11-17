@@ -5,15 +5,16 @@ namespace Extensions.Notifications
 #pragma warning disable CA2235 // Mark all non-serializable fields
     public sealed class NotificationsConfig : SerializedScriptableObject
     {
-                                        public const    string  PATH                        = "Assets/Resources/Notifications Settings.asset";
-                                        public const    string  PATH_FOR_RESOURCES_LOAD     = "Notifications Settings";
+                                                public const    string  PATH                        = "Assets/Resources/Notifications Settings.asset";
+                                                public const    string  PATH_FOR_RESOURCES_LOAD     = "Notifications Settings";
 
         [BoxGroup("B", false), HorizontalGroup("B/H")]
-        [TitleGroup("B/H/Settings")]    public bool             debug                       = true;
+        [TitleGroup("B/H/Settings")]            public bool             debug                       = true;
+        [BoxGroup("B2", false), HorizontalGroup("B2/H")]
         [InfoBox("Unity Notification Settings should contains the icon with the same name.")]
-        [TitleGroup("B/H/Settings")]    public string	        iconAndroidSmall		    = "app_notification_small";
+        [TitleGroup("B2/H/Settings Android")]   public string	        iconAndroidSmall		    = "app_notification_small";
         [InfoBox("Unity Notification Settings should contains the icon with the same name.")]
-        [TitleGroup("B/H/Settings")]    public string	        iconAndroidLarge		    = "app_notification_large";
+        [TitleGroup("B2/H/Settings Android")]   public string	        iconAndroidLarge		    = "app_notification_large";
 
 
 #if UNITY_EDITOR
