@@ -1,3 +1,4 @@
+using System.Collections;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
@@ -7,8 +8,9 @@ namespace Extensions.Notifications
     public static class NotificationsConfigMenu
     {
         [InitializeOnLoadMethod]
-        public static void Init()
-		{
+        public static IEnumerator Init()
+        {
+            yield return null; // let's Unity initialize itself and project resources first
             GetOrCreateConfig();
         }
 
