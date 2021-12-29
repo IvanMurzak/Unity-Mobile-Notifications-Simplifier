@@ -5,44 +5,14 @@ namespace Extensions.Notifications
 {
     public static class NotificationsInitializer
     {
-        public static NotificationsConfig settings { get; private set; } = CreateSettingsConfig();
+        private static NotificationsConfig _config = null;
+        public static NotificationsConfig Config => _config == null ? _config = LoadOrCreateConfig() : _config;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-#pragma warning disable IDE0051 // Remove unused private members
-#if UNITY_EDITOR
-        [UnityEditor.InitializeOnLoadMethod]
-#endif
-        internal static void Init()
-#pragma warning restore IDE0051 // Remove unused private members
+        private static NotificationsConfig LoadOrCreateConfig()
         {
-            RefreshSettingsFromConfig();
-        }
-
-        public static void RefreshSettingsFromConfig()
-        {
-            if (settings == null) settings = CreateSettingsConfig();
-        }
-
-        internal static NotificationsConfig GetExistingDefaultUnitySettings() => settings;
-
-        private static NotificationsConfig CreateSettingsConfig()
-        {
-            try
-            {
-                var config = Resources.Load<NotificationsConfig>(NotificationsConfig.PATH_FOR_RESOURCES_LOAD);
-                if (!config)
-                {
-                    Debug.Log($"Creating new Notifications Config into Resources folder");
-                    config = ScriptableObject.CreateInstance<NotificationsConfig>();
-                }
-                return config;
-            } 
-            catch (Exception e)
-			{
-                Debug.LogException(e);
-			}
-
-            return null;
+            var config = Resources.Load<NotificationsConfig>(NotificationsConfig.PATH_FOR_RESOURCES_LOAD);
+            if (!config) throw new NullReferenceException("Analytics config was not found");
+            return config;
         }
     }
 }

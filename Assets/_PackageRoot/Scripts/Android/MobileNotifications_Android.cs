@@ -26,7 +26,7 @@ namespace Extensions.Notifications
 			}
 		}
 
-		public static void Schedule(string identifier, string title, string text, DateTime fireTime, string largeIcon = null, string channelName = "", string channelDescription = "", string smallIcon = ICON_NOTIFICATION_SMALL)
+		public static void Schedule(string identifier, string title, string text, DateTime fireTime, string largeIcon = null, string channelName = "Default", string channelDescription = "Default", string smallIcon = ICON_NOTIFICATION_SMALL)
 		{
 			RegisterNotificationChannel(identifier, channelName, channelDescription);
 

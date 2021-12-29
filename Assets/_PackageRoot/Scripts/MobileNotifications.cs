@@ -5,17 +5,17 @@ namespace Extensions.Notifications
 { 
 	public static class MobileNotifications
 	{
-		static NotificationsConfig Config => NotificationsInitializer.settings;
+		static NotificationsConfig Config => NotificationsInitializer.Config;
 
-		public static void Send(string channel, string title, string text, string largeIcon = null, string channelName = "", string channelDescription = "", string smallIcon = null)
+		public static void Send(string channel, string title, string text, string largeIcon = null, string channelName = "default", string channelDescription = "Default", string smallIcon = null)
         {
 			Schedule(channel, title, text, DateTime.Now + TimeSpan.FromMilliseconds(250), largeIcon, channelName, channelDescription, smallIcon);
 		}
-		public static void Schedule(string channel, string title, string text, TimeSpan timeOffset, string largeIcon = null, string channelName = "", string channelDescription = "", string smallIcon = null)
+		public static void Schedule(string channel, string title, string text, TimeSpan timeOffset, string largeIcon = null, string channelName = "default", string channelDescription = "Default", string smallIcon = null)
 		{
 			Schedule(channel, title, text, DateTime.Now + timeOffset, largeIcon, channelName, channelDescription, smallIcon);
 		}
-		public static void Schedule(string channel, string title, string text, DateTime fireTime, string largeIcon = null, string channelName = "", string channelDescription = "", string smallIcon = null)
+		public static void Schedule(string channel, string title, string text, DateTime fireTime, string largeIcon = null, string channelName = "default", string channelDescription = "Default", string smallIcon = null)
 		{
 			if (string.IsNullOrEmpty(smallIcon)) smallIcon = Config.iconAndroidSmall;
 			if (string.IsNullOrEmpty(largeIcon)) largeIcon = Config.iconAndroidLarge;
