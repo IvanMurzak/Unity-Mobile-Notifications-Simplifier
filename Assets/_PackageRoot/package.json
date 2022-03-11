@@ -2,11 +2,11 @@
   "name": "extensions.unity.notifications",
   "displayName": "Unity Notifications",
   "author": { "name": "Ivan Murzak", "url": "https://github.com/IvanMurzak" },
-  "version": "1.1.0",
+  "version": "2.0.0",
   "unity": "2019.2",
   "description": "Unity Mobile Notifications integration.",
   "dependencies": {
-    "com.unity.mobile.notifications": "1.4.2",
+    "com.unity.mobile.notifications": "2.0.0",
     "com.cysharp.unitask": "2.2.5"
   },
   "scopedRegistries": [
