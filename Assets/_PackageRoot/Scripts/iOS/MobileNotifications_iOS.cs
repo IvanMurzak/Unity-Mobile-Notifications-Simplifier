@@ -21,12 +21,15 @@ namespace Extensions.Notifications
 					await UniTask.Yield();
 				};
 
-				string res = "RequestAuthorization:";
-				res += "\n finished: " + req.IsFinished;
-				res += "\n granted :  " + req.Granted;
-				res += "\n error:  " + req.Error;
-				res += "\n deviceToken:  " + req.DeviceToken;
-				Debug.Log(res);
+				if (NotificationsInitializer.Config.debug)
+				{
+					string res = "RequestAuthorization:";
+					res += "\n finished: " + req.IsFinished;
+					res += "\n granted :  " + req.Granted;
+					res += "\n error:  " + req.Error;
+					res += "\n deviceToken:  " + req.DeviceToken;
+					Debug.Log(res);
+				}
 			}
 		}
 		private static async UniTask RegisterNotificationChannel(string identifier, string title, string subtitle, string body, iOSNotificationTrigger trigger)
@@ -83,6 +86,10 @@ namespace Extensions.Notifications
 		public static void CancelAllScheduled()
 		{
 			iOSNotificationCenter.RemoveAllScheduledNotifications();
+		}
+		public static void ClearBadgeCounter()
+        {
+			iOSNotificationCenter.ApplicationBadge = 0;
 		}
 	}
 }

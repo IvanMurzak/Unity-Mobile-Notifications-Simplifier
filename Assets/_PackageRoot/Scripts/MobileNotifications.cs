@@ -40,5 +40,15 @@ namespace Extensions.Notifications
 			MobileNotifications_iOS.CancelAllScheduled();
 #endif
 		}
+
+		public static void ClearBadgeCounteriOS()
+		{
+			if (Config.debug)
+				Debug.Log($"MobileNotifications.ClearBadgeCounteriOS");
+
+#if UNITY_IOS
+			MobileNotifications_iOS.ClearBadgeCounter();
+#endif
+		}
 	}
 }
