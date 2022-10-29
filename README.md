@@ -17,7 +17,7 @@ Add the NotificationSender component to any object in a scene or prefab. Call th
 
 # How to install - Option 1 (RECOMMENDED)
 - Install [ODIN Inspector](https://odininspector.com/)
-- [Install OpenUPM-CLI](https://github.com/openupm/openupm-cli#installation)
+- Install [OpenUPM-CLI](https://github.com/openupm/openupm-cli#installation)
 - Open command line in Unity project folder
 - `openupm --registry https://registry.npmjs.org add extensions.unity.notifications`
 
