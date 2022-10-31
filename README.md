@@ -1,5 +1,5 @@
 # Unity Mobile Notifications Simplifier
-![npm](https://img.shields.io/npm/v/extensions.unity.notifications) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Mobile-Notifications-Simplifier)
+![npm](https://img.shields.io/npm/v/extensions.unity.notifications) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Mobile-Notifications-Simplifier) [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
 Ready to use Android and iOS mobile notification solution based on official Unity Mobile Notifications package. Build on top of [Unity Mobile Notifications](https://docs.unity3d.com/Packages/com.unity.mobile.notifications@1.4/manual/index.html) package. Supported codeless usage if needed but not required.
 
