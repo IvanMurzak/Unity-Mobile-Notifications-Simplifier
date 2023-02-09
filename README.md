@@ -27,20 +27,14 @@ Add the NotificationSender component to any object in a scene or prefab. Call th
 ```json
 {
   "dependencies": {
-    "extensions.unity.notifications": "2.0.0",
+    "extensions.unity.notifications": "2.0.2",
   },
   "scopedRegistries": [
     {
-      "name": "Unity Extensions",
-      "url": "https://registry.npmjs.org",
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
       "scopes": [
         "extensions.unity"
-      ]
-    },
-    {
-      "name": "NPM",
-      "url": "https://registry.npmjs.org",
-      "scopes": [
         "com.cysharp",
         "com.neuecc"
       ]
