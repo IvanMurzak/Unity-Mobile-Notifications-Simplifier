@@ -2,27 +2,20 @@
   "name": "extensions.unity.notifications",
   "displayName": "Unity Notifications",
   "author": { "name": "Ivan Murzak", "url": "https://github.com/IvanMurzak" },
-  "version": "2.0.0",
+  "version": "2.0.2",
   "unity": "2019.2",
   "description": "Unity Mobile Notifications integration.",
   "dependencies": {
-    "com.unity.mobile.notifications": "2.0.0",
-    "com.cysharp.unitask": "2.2.5"
+    "com.unity.mobile.notifications": "2.0.2",
+    "com.cysharp.unitask": "2.3.3"
   },
   "scopedRegistries": [
     {
-      "name": "Unity Extensions",
-      "url": "https://registry.npmjs.org",
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
       "scopes": [
-    	"extensions.unity"
-      ]
-    },
-    {
-      "name": "NPM",
-      "url": "https://registry.npmjs.org",
-      "scopes": [
-    	"com.cysharp",
-		"com.neuecc"
+        "extensions.unity",
+        "com.cysharp"
       ]
     }
   ]
